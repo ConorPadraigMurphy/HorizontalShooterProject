@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -8225032146033397505}
-  enemySpeed: 5
+  enemySpeed: 2
 --- !u!1 &7405768410796895237
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 5038712610816022113}
   - component: {fileID: 6464637686815515931}
   m_Layer: 0
-  m_Name: Plane Sprite
+  m_Name: Enemy1Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

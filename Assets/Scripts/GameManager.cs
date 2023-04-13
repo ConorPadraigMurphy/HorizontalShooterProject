@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
             health = 3;
             score = 0;
             scoreText.text = "Score: " + score;
-            SceneManager.LoadSceneAsync("MainMenu");
+            SceneManager.LoadSceneAsync("DeathScreen");
         }
     }
 
@@ -111,9 +111,20 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         Debug.Log(score);
 
-        if (SceneManager.GetActiveScene().name == "Level1" && score == 6)
+        if (SceneManager.GetActiveScene().name == "Level1" && score == 20)
         {
             Debug.Log("Enemies killed load new scene");
+            SceneManager.LoadSceneAsync("AfterLevel");
+        }
+        if (SceneManager.GetActiveScene().name == "Level2" && score == 39)
+        {
+            Debug.Log("Enemies killed load new scene");
+            SceneManager.LoadSceneAsync("AfterLevel");
+        }
+        if (SceneManager.GetActiveScene().name == "Level3" && score == 39)
+        {
+            Debug.Log("Enemies killed load new scene");
+            SceneManager.LoadSceneAsync("AfterLevel");
         }
     }
 }

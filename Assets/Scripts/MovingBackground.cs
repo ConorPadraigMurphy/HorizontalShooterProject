@@ -7,6 +7,7 @@ public class MovingBackground : MonoBehaviour
     public float speed = 2;
     public int endPoint = -120;
     public int returnPoint = 128;
+
     void Update()
     {
 
