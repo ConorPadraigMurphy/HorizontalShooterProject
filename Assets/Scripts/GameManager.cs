@@ -7,7 +7,9 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
 
+
     public static GameManager Instance;
+    public GameObject EnemySpawn;
     public GameObject canvas;
     public int health;
     public int maxHealth;
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         updateScore(0);
         Scene scene = SceneManager.GetActiveScene();
+        
     }
 
     void Update()
@@ -75,8 +78,30 @@ public class GameManager : MonoBehaviour
                 scoreText.text = "Score: " + score;
             }
         }
+
+
     }
 
+    void FixedUpdate()
+    {
+        int enemiesLeft = FindObjectsOfType<EnemyHealth>().Length;
+
+        if (SceneManager.GetActiveScene().name == "Level1" && enemiesLeft == 0)
+        {
+            Debug.Log("Enemies killed load new scene");
+            SceneManager.LoadSceneAsync("AfterLevel");
+        }
+        if (SceneManager.GetActiveScene().name == "Level2" && enemiesLeft == 0)
+        {
+            Debug.Log("Enemies killed load new scene");
+            SceneManager.LoadSceneAsync("AfterLevel");
+        }
+        if (SceneManager.GetActiveScene().name == "Level3" && enemiesLeft == 0)
+        {
+            Debug.Log("Enemies killed load new scene");
+            SceneManager.LoadSceneAsync("AfterLevel");
+        }
+    }
     public void Damagedealt(int damage)
     {
         //Only if the player is not invulnerable will they take damage to prevent taking more than one damage if you collid into the enemy multiple times very quickly
@@ -111,20 +136,5 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         Debug.Log(score);
 
-        if (SceneManager.GetActiveScene().name == "Level1" && score == 20)
-        {
-            Debug.Log("Enemies killed load new scene");
-            SceneManager.LoadSceneAsync("AfterLevel");
-        }
-        if (SceneManager.GetActiveScene().name == "Level2" && score == 39)
-        {
-            Debug.Log("Enemies killed load new scene");
-            SceneManager.LoadSceneAsync("AfterLevel");
-        }
-        if (SceneManager.GetActiveScene().name == "Level3" && score == 39)
-        {
-            Debug.Log("Enemies killed load new scene");
-            SceneManager.LoadSceneAsync("AfterLevel");
-        }
     }
 }

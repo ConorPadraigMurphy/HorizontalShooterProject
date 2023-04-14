@@ -33,11 +33,11 @@ RectTransform:
   m_Father: {fileID: 6263533342119476285}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 5.0999756, y: 210.4}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 7.0999756, y: -49.99997}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &6263533342048545404
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -476,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b14cbf4c46e14ab6a30f87350fa99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemySpawn: {fileID: 0}
   canvas: {fileID: 6263533342119476273}
   health: 3
   maxHealth: 3
@@ -595,11 +596,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b47d9b394e330c4980072fbb27a1eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonClick: {fileID: 1301791413}
+  buttonClick: {fileID: 5963840008614398530}
   enemyKill: {fileID: 0}
   powerupPickup: {fileID: 0}
   hurt: {fileID: 0}
-  playerGun: {fileID: 5963840008614398530}
+  playerGun: {fileID: 1301791413}
   muted: 0
 --- !u!82 &5963840008614398530
 AudioSource:
@@ -611,9 +612,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dfe6486b83651484e89e4268278e7a35, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b5b05da6c8b60f542b670a68b1fed261, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

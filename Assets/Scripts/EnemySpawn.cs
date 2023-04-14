@@ -6,8 +6,8 @@ public class EnemySpawn : MonoBehaviour
 {
     private int enemyamount;
     bool isSpawning = true;
-    [SerializeField] private int maxEnemies = 1;
-    [SerializeField] private float spawnRate = 2f;
+    [SerializeField]  int maxEnemies = 1;
+    [SerializeField]  float spawnRate = 2f;
     [SerializeField] GameObject[] enemyGroupPrefabs;
 
     void Start()

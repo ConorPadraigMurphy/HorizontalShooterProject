@@ -16,4 +16,12 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Update()
+    {
+        if (transform.position.x == -13)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
