@@ -18,6 +18,7 @@ public class Weapons : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             FireBullet();
+            AudioManager.Instance.PlayerGun();
         }
     }
 
