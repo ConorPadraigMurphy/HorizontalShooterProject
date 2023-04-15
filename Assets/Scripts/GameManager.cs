@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
             }
 
             if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2"
-            || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "TutorialLevel")
+            || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "EndlessLevel")
             {
                 canvas.SetActive(true);
             }

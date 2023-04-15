@@ -7,7 +7,6 @@ public class Weapons : MonoBehaviour
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] int bulletSpeed = 10;
     public GameObject Gun2;
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

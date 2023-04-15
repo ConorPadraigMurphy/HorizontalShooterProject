@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6659492641833535489}
-  enemySpeed: 1
+  enemySpeed: 2
 --- !u!50 &6659492641833535489
 Rigidbody2D:
   serializedVersion: 4

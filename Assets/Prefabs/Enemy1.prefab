@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 424416488974046801}
   - component: {fileID: -1528899996237169124}
   - component: {fileID: 3020222468097837881}
+  - component: {fileID: -3487044705286397586}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: EnemyDefaultPlane
@@ -182,7 +183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  animate: {fileID: 0}
 --- !u!114 &-1528899996237169124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +209,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: -8225032146033397505}
   enemySpeed: 2
+--- !u!95 &-3487044705286397586
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979725058531396357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2ceef67e2d612641ab1b4ae0e480ee0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7405768410796895237
 GameObject:
   m_ObjectHideFlags: 0
