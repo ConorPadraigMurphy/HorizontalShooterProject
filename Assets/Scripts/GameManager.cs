@@ -36,7 +36,11 @@ public class GameManager : MonoBehaviour
         score = 0;
         updateScore(0);
         Scene scene = SceneManager.GetActiveScene();
-        
+
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            AudioManager.Instance.MainMenu();
+        }
     }
 
     void Update()
@@ -88,19 +92,22 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Level1" && enemiesLeft == 0)
         {
-            Debug.Log("Enemies killed load new scene");
             SceneManager.LoadSceneAsync("AfterLevel");
         }
         if (SceneManager.GetActiveScene().name == "Level2" && enemiesLeft == 0)
         {
-            Debug.Log("Enemies killed load new scene");
             SceneManager.LoadSceneAsync("AfterLevel");
         }
         if (SceneManager.GetActiveScene().name == "Level3" && enemiesLeft == 0)
         {
-            Debug.Log("Enemies killed load new scene");
             SceneManager.LoadSceneAsync("AfterLevel");
         }
+        if (SceneManager.GetActiveScene().name == "Level3" && health == 0)
+        {
+            SceneManager.LoadSceneAsync("AfterEndlessLevel");
+        }
+
+
     }
     public void Damagedealt(int damage)
     {
@@ -121,11 +128,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator DamageCooldown()
+    public IEnumerator DamageCooldown()
     {
         //makes the player invulnerable for a a second.
         invulnerability = true;
         yield return new WaitForSeconds(1f);
+        invulnerability = false;
+    }
+
+    public IEnumerator ShieldPowerUp()
+    {
+        //makes the player invulnerable for a a second.
+        invulnerability = true;
+        yield return new WaitForSeconds(4f);
         invulnerability = false;
     }
 

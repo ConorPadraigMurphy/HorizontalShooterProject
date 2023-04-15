@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+  animate: {fileID: 0}
 --- !u!114 &-1528899996237169124
 MonoBehaviour:
   m_ObjectHideFlags: 0

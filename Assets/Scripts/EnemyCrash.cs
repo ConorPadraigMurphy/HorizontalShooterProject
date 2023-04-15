@@ -8,6 +8,7 @@ public class EnemyCrash : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            AudioManager.Instance.Hurt();
             Debug.Log("Doing Damage");
             GameManager.Instance.Damagedealt(1);
             Destroy(gameObject);

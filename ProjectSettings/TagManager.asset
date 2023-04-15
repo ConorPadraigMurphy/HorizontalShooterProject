@@ -7,6 +7,7 @@ TagManager:
   - EnemyDefaultPlane
   - Bullet
   - spawn
+  - PowerUp
   layers:
   - Default
   - TransparentFX

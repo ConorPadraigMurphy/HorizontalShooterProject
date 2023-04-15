@@ -20,20 +20,15 @@ public class EnemyShooting : MonoBehaviour
             EnemyFireBullet();
             yield return new WaitForSeconds(.5f);
             EnemyFireBullet();
-            //makes the player invulnerable for a a second.
             yield return new WaitForSeconds(2f);
         }
     }
 
     private void EnemyFireBullet()
     {
-        // instantiate bullet
         EnemyBullet enemyBullet = Instantiate(bulletPrefab);
-        // give it the same position as the player
         enemyBullet.transform.position = transform.position;
-        // give it velocity and move right
         Rigidbody2D rbb = enemyBullet.GetComponent<Rigidbody2D>();
-        //rbb.velocity = new Vector2(1 * speed, 0);
         rbb.velocity = Vector2.left * bulletSpeed;
     }
 }

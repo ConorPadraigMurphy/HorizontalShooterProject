@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource powerupPickup;
     [SerializeField] private AudioSource hurt;
     [SerializeField] private AudioSource playerGun;
+    [SerializeField] private AudioSource MainmenuMusic;
     public static AudioManager Instance;
 
     public bool muted;
@@ -65,6 +66,13 @@ public class AudioManager : MonoBehaviour
         if (muted == false)
         {
             playerGun.Play();
+        }
+    }
+    public void MainMenu()
+    {
+        if (muted == false)
+        {
+            MainmenuMusic.Play();
         }
     }
 }
