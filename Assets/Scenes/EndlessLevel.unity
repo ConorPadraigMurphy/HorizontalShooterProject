@@ -17994,6 +17994,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 4314656483841690560, guid: 561dce6e683f9b9439ef3b79328ff17b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4314656483841690561, guid: 561dce6e683f9b9439ef3b79328ff17b, type: 3}
       propertyPath: spawnRate
       value: 8
@@ -36136,6 +36140,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &860136699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4568047390708801525, guid: a9c5f9a47c03c1a41b56678e9e965561, type: 3}
+  m_PrefabInstance: {fileID: 4568047390997789496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1126584785
 GameObject:
   m_ObjectHideFlags: 0
@@ -55228,6 +55237,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 4568047391609969617, guid: a9c5f9a47c03c1a41b56678e9e965561, type: 3}
+      propertyPath: Gun2
+      value: 
+      objectReference: {fileID: 860136699}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c5f9a47c03c1a41b56678e9e965561, type: 3}
 --- !u!1001 &6263533342091347252

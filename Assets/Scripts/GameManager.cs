@@ -6,10 +6,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-
-
     public static GameManager Instance;
-    public GameObject EnemySpawn;
     public GameObject canvas;
     public int health;
     public int maxHealth;
@@ -82,8 +79,6 @@ public class GameManager : MonoBehaviour
                 scoreText.text = "Score: " + score;
             }
         }
-
-
     }
 
     void FixedUpdate()
@@ -106,9 +101,8 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadSceneAsync("AfterEndlessLevel");
         }
-
-
     }
+    
     public void Damagedealt(int damage)
     {
         //Only if the player is not invulnerable will they take damage to prevent taking more than one damage if you collid into the enemy multiple times very quickly

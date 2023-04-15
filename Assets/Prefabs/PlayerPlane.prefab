@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flightSpeed: 5
   animate: {fileID: 0}
-  rb: {fileID: 0}
+  rb: {fileID: 4568047391167706676}
 --- !u!50 &4568047391167706676
 Rigidbody2D:
   serializedVersion: 4
