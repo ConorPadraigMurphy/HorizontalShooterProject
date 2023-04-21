@@ -34,10 +34,10 @@ public class GameManager : MonoBehaviour
         updateScore(0);
         Scene scene = SceneManager.GetActiveScene();
 
-        if (SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            AudioManager.Instance.MainMenu();
-        }
+        // if (SceneManager.GetActiveScene().name == "MainMenu")
+        // {
+        AudioManager.Instance.MainMenu();
+        //}
     }
 
     void Update()
@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadSceneAsync("AfterEndlessLevel");
         }
     }
-    
+
     public void Damagedealt(int damage)
     {
         //Only if the player is not invulnerable will they take damage to prevent taking more than one damage if you collid into the enemy multiple times very quickly

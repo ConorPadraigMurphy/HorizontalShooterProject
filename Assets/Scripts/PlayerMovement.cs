@@ -8,23 +8,48 @@ public class PlayerMovement : MonoBehaviour
     float Horizontal;
     float Vertical;
     float xBound = 7.5f;
-    //private Animation animate;
     public Rigidbody2D rb;
-    // Start is called before the first frame update
+    ButtonPressed Up;
+    ButtonPressed Down;
+
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Up = GameObject.Find("UpButton").GetComponent<ButtonPressed>();
+        Down = GameObject.Find("DownButton").GetComponent<ButtonPressed>();
+
     }
 
     void Update()
     {
-        Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
-        Vector2 move = new Vector2(-Vertical, Horizontal);
-        transform.Translate(move * flightSpeed * Time.deltaTime);
+        PlaneMovementr(-Vertical);
 
+        if (Up.IsButtonPressed)
+        {
+            PlaneMovementr(-1);
+        }
+        if (Down.IsButtonPressed)
+        {
+            PlaneMovementr(1);
+        }
+
+
+
+    }
+
+
+    public void PlaneMovementr(float direction)
+    {
+        Vector2 move = new Vector2(direction, Horizontal);
+        transform.Translate(move * flightSpeed * Time.deltaTime);
         float y = Mathf.Clamp(transform.position.y, -xBound, xBound);
         transform.position = new Vector2(-7.5f, y);
+
     }
+
+
 }
 

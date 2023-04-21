@@ -9,9 +9,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource playerGun;
     [SerializeField] private AudioSource MainmenuMusic;
     public static AudioManager Instance;
-
     public bool muted;
-
     public void Togglemute()
     {
         muted = !muted;
@@ -19,6 +17,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+
         if (Instance != null)
         {
             Destroy(gameObject);

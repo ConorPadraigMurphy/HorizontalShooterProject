@@ -10,7 +10,6 @@ public class Weapons : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             FireBullet();
-            AudioManager.Instance.PlayerGun();
         }
 
         if (GameManager.Instance.health == 1)
@@ -19,10 +18,12 @@ public class Weapons : MonoBehaviour
         }
     }
 
-    private void FireBullet()
+    public void FireBullet()
     {
+
         // instantiate bullet
         Bullet bullet = Instantiate(bulletPrefab);
+        AudioManager.Instance.PlayerGun();
         // give it the same position as the player
         bullet.transform.position = transform.position;
         // give it velocity and move right
