@@ -9,9 +9,11 @@ public class EnemyBullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Destroy(gameObject);
         if (collision.gameObject.tag == "Player")
         {
             GameManager.Instance.Damagedealt(1);
+            Destroy(gameObject);
         }
     }
 }

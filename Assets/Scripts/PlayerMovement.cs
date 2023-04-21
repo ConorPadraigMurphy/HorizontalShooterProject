@@ -7,12 +7,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator animate;
     float Horizontal;
     float Vertical;
-    float xBound = 7.5f;
+    [SerializeField] float MinxBound = 0f;
+    [SerializeField] float PosxBound = 0f;
     public Rigidbody2D rb;
     ButtonPressed Up;
     ButtonPressed Down;
-
-
 
     void Start()
     {
@@ -35,21 +34,14 @@ public class PlayerMovement : MonoBehaviour
         {
             PlaneMovementr(1);
         }
-
-
-
     }
-
 
     public void PlaneMovementr(float direction)
     {
         Vector2 move = new Vector2(direction, Horizontal);
         transform.Translate(move * flightSpeed * Time.deltaTime);
-        float y = Mathf.Clamp(transform.position.y, -xBound, xBound);
+        float y = Mathf.Clamp(transform.position.y, MinxBound, PosxBound);
         transform.position = new Vector2(-7.5f, y);
-
     }
-
-
 }
 

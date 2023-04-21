@@ -55807,6 +55807,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 4568047391167706675, guid: a9c5f9a47c03c1a41b56678e9e965561, type: 3}
+      propertyPath: MinxBound
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568047391167706675, guid: a9c5f9a47c03c1a41b56678e9e965561, type: 3}
+      propertyPath: PosxBound
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4568047391609969617, guid: a9c5f9a47c03c1a41b56678e9e965561, type: 3}
       propertyPath: Gun2
       value: 
@@ -55820,6 +55828,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6263533342119476275, guid: 601ebf5a23d434c4581a9823b6965554, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6263533343445408122, guid: 601ebf5a23d434c4581a9823b6965554, type: 3}
       propertyPath: m_Name
       value: Gamemanager

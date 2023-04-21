@@ -33,11 +33,6 @@ public class GameManager : MonoBehaviour
         score = 0;
         updateScore(0);
         Scene scene = SceneManager.GetActiveScene();
-
-        // if (SceneManager.GetActiveScene().name == "MainMenu")
-        // {
-        AudioManager.Instance.MainMenu();
-        //}
     }
 
     void Update()
@@ -66,6 +61,7 @@ public class GameManager : MonoBehaviour
             || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "EndlessLevel")
             {
                 canvas.SetActive(true);
+
             }
             else
             {
@@ -144,6 +140,5 @@ public class GameManager : MonoBehaviour
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
         Debug.Log(score);
-
     }
 }

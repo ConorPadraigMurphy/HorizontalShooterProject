@@ -8,7 +8,6 @@ public class MovingBackground : MonoBehaviour
 
     void Update()
     {
-
         Vector2 move = new Vector2(speed * Time.deltaTime, 0);
         transform.Translate(move * -speed);
 

@@ -1065,7 +1065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6263533342119476275, guid: 601ebf5a23d434c4581a9823b6965554, type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 12600
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 6263533342119476275, guid: 601ebf5a23d434c4581a9823b6965554, type: 3}
       propertyPath: m_ReferenceResolution.y
@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
