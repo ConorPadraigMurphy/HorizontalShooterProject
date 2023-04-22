@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadSceneAsync("AfterLevel");
         }
-        if (SceneManager.GetActiveScene().name == "Level3" && health == 0)
+        if (SceneManager.GetActiveScene().name == "EndlessLevel" && health == 0)
         {
             SceneManager.LoadSceneAsync("AfterEndlessLevel");
         }
