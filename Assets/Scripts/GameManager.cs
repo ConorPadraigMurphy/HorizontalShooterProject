@@ -111,10 +111,13 @@ public class GameManager : MonoBehaviour
         //If the players health is less than or equal to zero reset the palyers stats
         if (health <= 0)
         {
-            health = 3;
-            score = 0;
-            scoreText.text = "Score: " + score;
-            SceneManager.LoadSceneAsync("DeathScreen");
+            if (SceneManager.GetActiveScene().name != "EndlessLevel" && health == 0)
+            {
+                health = 3;
+                score = 0;
+                scoreText.text = "Score: " + score;
+                SceneManager.LoadSceneAsync("DeathScreen");
+            }
         }
     }
 

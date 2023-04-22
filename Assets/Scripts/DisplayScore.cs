@@ -7,6 +7,6 @@ public class DisplayScore : MonoBehaviour
     public TextMeshProUGUI EndscoreText;
     void Start()
     {
-        EndscoreText.text = "Enemies Destroyed: " + GameManager.Instance.score;
+        EndscoreText.text = "Score: " + GameManager.Instance.score;
     }
 }
